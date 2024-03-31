@@ -10,5 +10,9 @@
 
   <ItemGroup>
     <PackageReference Include="EPPlus" Version="7.1.0" />
+    <!--
+      TODO: try to make this work
+      <PackageReference Include="EPPlusFree" Version="4.5.3.8" />
+    -->
   </ItemGroup>
 </Project>
