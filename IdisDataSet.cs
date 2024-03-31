@@ -24,12 +24,6 @@ public class IdisDataSet
 
     public void SaveToExcel(string outputFile, bool verbose = false)
     {
-        // If you're going to use this commercially, you need a licence to 
-        // EPPlus. Read more here: 
-        //   https://epplussoftware.com/en/LicenseOverview/LicenseFAQ
-        
-        // ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-
         ExcelPackage package = new();
         if (verbose)
         {

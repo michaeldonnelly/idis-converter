@@ -122,8 +122,6 @@ public class IdisFile
             worksheet.Cells[row, column].Value = field;
         }
     }
-    
-
 
     private void FormatWorksheet(ExcelWorksheet worksheet, int lastRow)
     {
@@ -141,8 +139,7 @@ public class IdisFile
         }
 
         worksheet.View.FreezePanes(2, 1);
-        worksheet.Cells[1, 1, 1, column].AutoFitColumns();  // Fit column names
-
+        // TODO: figure out column widths - can't use AutoFitColumns because it isn't in EPPlusFree
     }
 
     private void FormatColumn(ExcelRange range, IdisColumn idisColumn)
