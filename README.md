@@ -1,4 +1,4 @@
-Integrated Disbursement and Information System (IDIS) Online is a program of the U.S. Department of Housing and Urban Development (HUD) Office of Community Planning and Development (CPD). A user of IDIS can download a *data extract* containing financial data for CDBG, HOME, ESG, HTF, and HOPWA.  Each file in this data extract starts with a key that describes the fixed-width columns contained in that file.  A data extract consists of many such files.
+Integrated Disbursement and Information System (IDIS) Online is a program of the U.S. Department of Housing and Urban Development (HUD) Office of Community Planning and Development (CPD). A user of IDIS can download a *data extract* containing data for CDBG, HOME, ESG, HTF, and HOPWA.  Each file in this data extract starts with a key that describes the fixed-width columns contained in that file.  A data extract consists of many such files.
 
 This program reads the key and the data in an IDIS data extract and produces a tab separated value (TSV) file.  The first row in the TSV contains the names of the fields in that extract to act as column headers.  
 
