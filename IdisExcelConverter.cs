@@ -50,6 +50,10 @@ public static class IdisExcelConverter
 
     private static bool FileIsLocked(string fileName)
     {
+        if (!File.Exists(fileName))
+        {
+            return false;
+        }
         try
         {
             FileStream fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Write);
