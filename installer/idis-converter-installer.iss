@@ -6,7 +6,7 @@
 #define MyAppURL "https://github.com/michaeldonnelly/idis-converter"
 #define MyAppExeName "idis-converter.exe"
 #define MyAppAssocExt ".zip"
-#define ContextMenuText "Convert IDIS to Excel"
+#define MyAppContextMenuText "Convert IDIS to Excel"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
@@ -48,7 +48,7 @@ Source: "..\LICENSE"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]
-Root: HKCR; Subkey: "SystemFileAssociations\{#MyAppAssocExt}\shell\{#ContextMenuText}\command";  ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
+Root: HKCR; Subkey: "SystemFileAssociations\{#MyAppAssocExt}\shell\{#MyAppContextMenuText}\command";  ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
 
 [Icons]
 Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
