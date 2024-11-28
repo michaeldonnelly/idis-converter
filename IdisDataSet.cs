@@ -16,9 +16,30 @@ public class IdisDataSet
             }
             Stream stream = entry.Open();
             StreamReader streamReader = new(stream);
-            IdisSchema schema = new(streamReader);
-            IdisFile file = new(streamReader, schema, entry.Name);
-            Files.Add(file);
+            
+            try
+            {
+                IdisSchema schema = new(streamReader);
+                IdisFile file = new(streamReader, schema, entry.Name);
+                Files.Add(file);
+            }
+            catch(IdisException exception)
+            {
+                if(verbose)
+                {
+                    ConsoleColor currentForeground = Console.ForegroundColor;
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"    {exception.Message}");
+                    Console.WriteLine($"    Error reading line:");
+                    Console.WriteLine($"       {exception.Line}");
+                    Console.WriteLine($"    This file cannot be included in the workbook.");
+                    Console.ForegroundColor = currentForeground;
+                }
+                else
+                {
+                    throw;
+                }               
+            }
         }
     }
 

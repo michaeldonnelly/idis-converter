@@ -3,7 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
-    <RuntimeIdentifier>win-x64</RuntimeIdentifier>    
+    <!-- If you need to debug this on a machine with an ARM processor, comment out the next line. -->
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <RootNamespace>idis_converter</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <SelfContained>true</SelfContained>

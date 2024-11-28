@@ -14,7 +14,16 @@ public class IdisSchema
         string? line = streamReader.ReadLine();
         while (!string.IsNullOrWhiteSpace(line))
         {
-            IdisColumn column = new(line);
+            IdisColumn column;
+            try
+            {
+                column = new(line);
+            }
+            catch(Exception ex)
+            {
+                string message = "Something is wrong with the schema formatting for this file.";
+                throw new IdisException(message, ex, line);
+            }
             columns.Add(column);
             line = streamReader.ReadLine();
         }
