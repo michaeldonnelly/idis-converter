@@ -1,17 +1,8 @@
-To use this to convert an IDIS file into an Excel workbook:
+To use this to convert an IDIS data extract ZIP file into an Excel workbook, you can do either of the following:
 
- 1. Find a dataset that you downloaded from IDIS. 
-   - The filename probably starts with "Data_Extract."
-   - The file's Type is probably "Compressed (zipped) Folder."
+ - Drag the file onto the "IDIS Converter" icon on your desktop.
+ - Right click on the file,
+   Click "Show more options" at the bottom of the context menu, and
+   Click "Convert IDIS to Excel" near the top of the second context menu.
 
- 2. Right click on that file.
-
- 3. Click "Show more options" at the bottom of the context menu.
-
- 4. Click "Convert IDIS to Excel" near the top of the context menu. 
-
- 5. The Excel file will be in the same directory as the original file.
-
-
-Alternately, if you added a shortcut to your desktop when you installed this, 
-you can drag an IDIS file and drop it on that shortcut.  
+After you do either of these, the Excel file will be in the same directory as the original file.

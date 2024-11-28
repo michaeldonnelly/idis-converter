@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup> 
-    <None Update="after-install.txt"> 
+    <None Update="instructions.txt"> 
       <CopyToOutputDirectory>Always</CopyToOutputDirectory> 
     </None> 
   </ItemGroup>
