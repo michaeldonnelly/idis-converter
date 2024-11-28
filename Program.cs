@@ -1,6 +1,9 @@
 ﻿if (args.Length < 1)
 {
-    Console.WriteLine("Pass in a ZIP file with an IDIS data extract.");
+    string filePath = "after-install.txt"; 
+    string instructions = File.ReadAllText(filePath); 
+    Console.WriteLine(instructions);
+    Console.ReadKey();
 }
 else
 {
