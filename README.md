@@ -2,7 +2,7 @@ Integrated Disbursement and Information System (IDIS) Online is a program of the
 
 This program converts an IDIS extract into an Excel spreadsheet (XSLX).  Each file in the extract becomes a tab in the spreadsheet.  
 
-Download `idis-converter-setup.exe` to install this utility, then follow `instructions.txt` to convert a file.  
+Download [idis-converter-setup.exe](installer/Output/idis-converter-setup.exe) to install this utility, then follow [instructions.txt](instructions.txt) to convert a file.  
 
 ## Acknowledgments
 
