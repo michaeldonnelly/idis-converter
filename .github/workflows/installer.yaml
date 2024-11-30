@@ -28,9 +28,13 @@ jobs:
         curl -L -o is.exe https://files.jrsoftware.org/is/6/innosetup-6.3.3.exe
         .\is.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
     
+    - name: Extract Version from Tag 
+      id: extract_version 
+      run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
+
     - name: Build Installer
       run: |
-        & 'C:\Program Files (x86)\Inno Setup 6\ISCC.exe' installer\idis-converter-installer.iss
+        & 'C:\Program Files (x86)\Inno Setup 6\ISCC.exe' /dMyAppVersion=${{ env.VERSION }} installer\idis-converter-installer.iss
     
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
@@ -50,4 +54,3 @@ jobs:
         generate_release_notes: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-        
