@@ -32,6 +32,9 @@ jobs:
       id: extract_version 
       run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
 
+    - name: Output Version 
+      run: echo ${{ env.VERSION }}
+
     - name: Build Installer
       run: |
         & 'C:\Program Files (x86)\Inno Setup 6\ISCC.exe' /dMyAppVersion=${{ env.VERSION }} installer\idis-converter-installer.iss
