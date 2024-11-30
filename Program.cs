@@ -1,6 +1,6 @@
 ﻿if (args.Length < 1)
 {
-    string instructionsFile = "instructions.txt"; 
+    string instructionsFile = "INSTRUCTIONS.md"; 
     string instructions = File.ReadAllText(instructionsFile); 
     Console.WriteLine(instructions);
 }
