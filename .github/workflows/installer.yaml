@@ -28,12 +28,12 @@ jobs:
         curl -L -o is.exe https://files.jrsoftware.org/is/6/innosetup-6.3.3.exe
         .\is.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
     
-    - name: Extract Version from Tag 
-      id: extract_version 
-      run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
-
-    - name: Output Version 
-      run: echo ${{ env.VERSION }}
+    #- name: Extract Version from Tag 
+    #  id: extract_version 
+    #  run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
+    #
+    #- name: Output Version 
+    #  run: echo ${{ env.VERSION }}
 
     - name: Build Installer
       run: |
